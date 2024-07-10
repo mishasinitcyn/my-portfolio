@@ -4,7 +4,7 @@ import SAPLogo from './img/SAP.png'
 
 import repoCleanup from './img/repocleanup.png'
 import fortisBC from './img/fortisbc.jpeg'
-import mlChat from './img/mlchat.png'
+import mlChat from './img/mlchat_thumbnail.png'
 import bloodbank from './img/bloodbank.png'
 import documentEmbeddings from './img/github.avif'
 import cmdp from './img/cmdp.png'
