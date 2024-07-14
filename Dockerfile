@@ -13,4 +13,4 @@ COPY --from=build /app/build ./build
 COPY package*.json ./
 RUN npm install --only=production
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build", "l", "3000"]
