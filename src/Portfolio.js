@@ -117,7 +117,7 @@ const Experience = () => (
       period="May 2024 - Present"
       responsibilities={[
         "Developing a multi-agent system for automated contract assessment with AutoGen and Doctran.",
-        "Collaborated with the translation team on LLM integration for English to German translation.",
+        //"Collaborated with the translation team on LLM integration for English to German translation.",
         "Conducted experiments with BERT and other models using MLflow, performing hyperparameter tuning and fine-tuning.",
         "Deployed commercial license classifier with explainable AI interface using Lime and Streamlit."
       ]}
