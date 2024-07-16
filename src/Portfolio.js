@@ -204,6 +204,16 @@ const SideProjects = () => {
 
   const projects = [
     {
+      title:"Personal Cloud", 
+      image: "https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", 
+      date: "July 2024",
+      shortDescription: "Personal server with app deployment via Coolify",
+      bulletPoints: [
+        "Formatted a Lenovo TS150 server with Ubuntu", 
+        "Set up a CI/CD pipeline using Coolify to deploy applications to my domain"
+      ] 
+    }, 
+    {
       title: "RepoCleanup",
       image: repoCleanup,
       date: "June 2024 - Present",
