@@ -231,18 +231,20 @@ const PortfolioSection = () => {
     {
       title: "RepoCleanup",
       images: [...images.repocleanup],
-      date: "June 2024 - Present",
-      shortDescription: "GitHub management application",
+      date: "June 2024 - August 2024",
+      shortDescription: "GitHub administration application",
       // fullDescription: "An application for removing spam issues from GitHub repositories.",
       bulletPoints: [
-        "Led the development of an application for removing spam issues from GitHub repositories.",
-        "Assembled a first-of-its-kind dataset of spam GitHub issues and evaluated an ensemble of classification models.",
-        "Created custom University-style labs to teach practical machine learning and data science concepts such as exploratory data analysis, web scraping, BigQuery, MLflow, BERT finetuning, and natural language processing."
+        "Developed a Github administration tool for adding rules and removing spam issues using the Octokit API",
+        "Deployed on a personal server with Postgres database on Coolify "
+        // "Led the development of an application for removing spam issues from GitHub repositories.",
+        // "Assembled a first-of-its-kind dataset of spam GitHub issues and evaluated an ensemble of classification models.",
+        // "Created custom University-style labs to teach practical machine learning and data science concepts such as exploratory data analysis, web scraping, BigQuery, MLflow, BERT finetuning, and natural language processing."
       ],
       projectUrl: "https://repocleanup.com",
       github: "https://github.com/mishasinitcyn/RepoCleanup",
       // medium: "#",
-      // youtube: "#"
+      youtube: "https://www.youtube.com/watch?v=yNBtKRospZs"
     },
     {
       title: "MLChat Learning Platform",
@@ -257,6 +259,7 @@ const PortfolioSection = () => {
         "Deployed Angular frontend and fastAPI backend on Google Cloud Run as Docker images with custom nginx server configuration."
 
       ],
+      projectUrl: 'https://youtu.be/sGYPFMAnqSw',
       github: "https://github.com/mishasinitcyn/MLChat/",
       medium: "https://medium.com/@msa242/mlchat-a-retrieval-augmented-generation-rag-learning-platform-4f5a5601fcff",
       youtube: 'https://youtu.be/sGYPFMAnqSw'
