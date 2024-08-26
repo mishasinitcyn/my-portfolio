@@ -10,7 +10,8 @@ RUN npm run build
 FROM node:14-alpine
 WORKDIR /app
 COPY --from=build /app/build ./build
-COPY package*.json ./
+COPY --from=build /app/package*.json ./
 RUN npm install --only=production
+RUN npm install -g serve
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
