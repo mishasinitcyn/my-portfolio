@@ -93,7 +93,7 @@ const Experience = () => (
       period="May 2024 - Present"
       responsibilities={[
         "Developed a multi-agent system for automated contract assessment with Doctran and SAP Gen-AI SDK.",
-        "Developed an ensemble of natural language models with BERT and sk-learn using MLflow.",
+        "Trained and evaluated an ensemble of natural language models with BERT and sk-learn using MLflow.",
         "Deployed machine learning models in production with FastAPI and Gradio."
       ]}
     />
