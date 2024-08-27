@@ -218,17 +218,6 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title:"Personal Cloud", 
-      images: ["https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", ...images.personal_cloud], 
-      date: "July 2024",
-      shortDescription: "Personal server with app deployment via Coolify",
-      bulletPoints: [
-        "Formatted a Lenovo TS150 server with Ubuntu to self-host applications", 
-        "Set up a CI/CD pipeline using Coolify to manage multiple deployments",
-        "Published a guide to self-hosting"
-      ] 
-    }, 
-    {
       title: "RepoCleanup.com",
       images: [...images.repocleanup],
       date: "June 2024 - August 2024",
@@ -293,7 +282,18 @@ const PortfolioSection = () => {
       projectUrl: "https://github.com/n-maido/blood-bank-database",
       github: "https://github.com/n-maido/blood-bank-database",
       // youtube: "#"
-    }
+    },
+    {
+      title:"Personal Cloud", 
+      images: ["https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", ...images.personal_cloud], 
+      date: "July 2024",
+      shortDescription: "Personal server with app deployment via Coolify",
+      bulletPoints: [
+        "Formatted a Lenovo TS150 server with Ubuntu to self-host applications", 
+        "Set up a CI/CD pipeline using Coolify to manage multiple deployments",
+        "Published a guide to self-hosting"
+      ] 
+    }, 
   ];
 
   const publications = [
