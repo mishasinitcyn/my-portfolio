@@ -15,7 +15,7 @@ const importAll = (r) => {
   return images;
 };
 
-const images = importAll(require.context('./img', true, /\.(png|jpe?g|svg|avif)$/));
+const images = importAll(require.context('./img', true, /\.(png|jpe?g|svg|avif|gif)$/));
 
 const ProfileHeader = ({ profilePicture }) => (
   <div className="flex flex-col md:flex-row items-center justify-between mb-8">
@@ -92,9 +92,9 @@ const Experience = () => (
       role="Data Science Intern" 
       period="May 2024 - Present"
       responsibilities={[
-        "Developing a multi-agent system for automated contract assessment with AutoGen and Doctran.",
-        "Conducted experiments with BERT and other models using MLflow, performing hyperparameter tuning and fine-tuning.",
-        "Deployed commercial license classifier with explainable AI interface using Lime and Streamlit."
+        "Developed a multi-agent system for automated contract assessment with Doctran and SAP Gen-AI SDK.",
+        "Developed an ensemble of natural language models with BERT and sk-learn using MLflow.",
+        "Deployed machine learning models in production with FastAPI and Gradio."
       ]}
     />
     <ExperienceItem 
@@ -229,7 +229,7 @@ const PortfolioSection = () => {
       ] 
     }, 
     {
-      title: "RepoCleanup",
+      title: "RepoCleanup.com",
       images: [...images.repocleanup],
       date: "June 2024 - August 2024",
       shortDescription: "GitHub administration application",
@@ -265,7 +265,7 @@ const PortfolioSection = () => {
       youtube: 'https://youtu.be/sGYPFMAnqSw'
     },
     {
-      title: "Document Management Application",
+      title: "(Acquired) Document Management Application",
       images: [...images.fortisbc],
       date: "March-April 2022",
       shortDescription: "Proprietary document system sold to FortisBC",
@@ -277,6 +277,7 @@ const PortfolioSection = () => {
 
       ],
       // github: "#",
+      projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
       youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
     },
     {
@@ -289,6 +290,7 @@ const PortfolioSection = () => {
         "Developed and deployed a Postgres database on Heroku.",
         "Composed advanced SQL queries, enforced BCNF normalization standards to optimize data integrity and query efficiency."
       ],
+      projectUrl: "https://github.com/n-maido/blood-bank-database",
       github: "https://github.com/n-maido/blood-bank-database",
       // youtube: "#"
     }
