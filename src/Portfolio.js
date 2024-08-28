@@ -23,7 +23,7 @@ const ProfileHeader = ({ profilePicture }) => (
       <img src={profilePicture} alt="Profile" className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full mb-4 md:mb-0 md:mr-8 object-cover"/>
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">Mikhail Sinitcyn</h1>
-        <p className="text-xl text-gray-600 mb-4">Software Engineer. Data Scientist.</p>
+        <p className="text-xl text-gray-600 mb-4">Software Engineer. "Indie Hacker".</p>
         <div className="flex justify-center md:justify-start space-x-4">
           <a href="https://github.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-black">
             <GithubIcon />
@@ -40,7 +40,7 @@ const ProfileHeader = ({ profilePicture }) => (
         </div>
       </div>
     </div>
-    <img src="https://i.pinimg.com/originals/66/00/c2/6600c2f3613c019aea6e2cf1ab22a061.gif" alt="Animated GIF" className="w-60 mt-0 md:mt-0"/>
+    {/* <img src="https://i.pinimg.com/originals/66/00/c2/6600c2f3613c019aea6e2cf1ab22a061.gif" alt="Animated GIF" className="w-60 mt-0 md:mt-0"/> */}
   </div>
 );
 
@@ -49,18 +49,19 @@ const AboutMe = () => (
     <h2 className="text-2xl font-bold mb-4">About Me</h2>
     <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
       <p className="mb-4">
-        <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"{{Data Science Intern}}"}</span> @ 🚀 SAP
+        <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"{{CS Student at SFU}}"}</span> prev @ 🚀 SAP 
       </p>
       <div className="flex flex-wrap gap-2 mb-4">
-        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">Software Development</span>
+        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Software Development</span>
         <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded">Machine Learning</span>
-        {/* <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Data Science</span> */}
-        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Database Systems</span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Database Systems</span>
+        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">DevOps</span>
       </div>
       <p className="text-gray-700">
-      Hi! My name is Mikhail (Misha) Sinitcyn. I'm a 4th year Computer Science student at Simon Fraser University in Vancouver.
-      I have experience developing enterprise applications and machine learning solutions for FortisBC and SAP.
-      I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord.
+      Hi! My name is Mikhail (Misha) Sinitcyn. I'm a 4th year Computer Science student at Simon Fraser University.
+      I have developed enterprise applications and machine learning solutions professionally for FortisBC and SAP.
+      In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium.
+      {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
     
       </p>
     </div>
@@ -94,7 +95,9 @@ const Experience = () => (
       responsibilities={[
         "Developed a multi-agent system for automated contract assessment with Doctran and SAP Gen-AI SDK.",
         "Trained and evaluated an ensemble of natural language models with BERT and sk-learn using MLflow.",
-        "Deployed machine learning models in production with FastAPI and Gradio."
+        "Deployed machine learning models in production with Docker, FastAPI and Gradio.",
+        "Wrote ETL scripts to transform, cluster, and visualize long-form text data."
+
       ]}
     />
     <ExperienceItem 
@@ -102,8 +105,7 @@ const Experience = () => (
       role="Software Engineer Intern" 
       period="Jan 2023 - Sep 2023"
       responsibilities={[
-        "Developed a contract review platform using Angular, Flask, and MongoDB, integrating GPT-4 for automated risk assessments, which accelerated the review process by 50%.",
-        "Integrated GPT4 API for automated contract assessment, selected as the lighthouse project by the department head.", 
+        "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%.",
         "Deployed application to Apache HTTP server, configured custom routes and bash scripts.",
         "Facilitated data delivery pipeline to the analytics team, parsing and transporting large volumes of MongoDB data to Azure Data Lake.",
         "Wrote API tests using Postman, frontend unit tests with Jest, and UI tests with Selenium, providing full application coverage.", 
@@ -224,11 +226,9 @@ const PortfolioSection = () => {
       shortDescription: "GitHub administration application",
       // fullDescription: "An application for removing spam issues from GitHub repositories.",
       bulletPoints: [
-        "Developed a Github administration tool for adding rules and removing spam issues using the Octokit API",
-        "Deployed on a personal server with Postgres database on Coolify "
-        // "Led the development of an application for removing spam issues from GitHub repositories.",
-        // "Assembled a first-of-its-kind dataset of spam GitHub issues and evaluated an ensemble of classification models.",
-        // "Created custom University-style labs to teach practical machine learning and data science concepts such as exploratory data analysis, web scraping, BigQuery, MLflow, BERT finetuning, and natural language processing."
+        "Developed a Github administration tool for adding rules and removing spam issues using the Octokit API.",
+        "Lead a team of junior developers in collecting a novel dataset of spam GitHub issues and trained a classification model.",
+        "Self-hosted the Dockerized application with Postgres database on Lenovo server running Coolify for CI/CD.",
       ],
       projectUrl: "https://repocleanup.com",
       github: "https://github.com/mishasinitcyn/RepoCleanup",
@@ -236,10 +236,10 @@ const PortfolioSection = () => {
       youtube: "https://www.youtube.com/watch?v=yNBtKRospZs"
     },
     {
-      title: "MLChat Learning Platform",
+      title: "MLChat",
       images: [...images.mlchat],
-      date: "May 2024",
-      shortDescription: "AI-powered learning platform developed Google AI Hackathon]",
+      date: "May 2024)",
+      shortDescription: "AI-powered learning platform (Google AI Hackathon)",
       // fullDescription: "A learning platform with a chatbot that answers machine learning questions.",
       bulletPoints: [
         "Created a learning platform with a chatbot that answers machine learning questions with direct references to textbook material.",
@@ -266,8 +266,8 @@ const PortfolioSection = () => {
 
       ],
       // github: "#",
-      projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
-      youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
+      // projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
+      // youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
     },
     {
       title: "Blood Bank Database",
@@ -284,14 +284,13 @@ const PortfolioSection = () => {
       // youtube: "#"
     },
     {
-      title:"Personal Cloud", 
+      title:"Personal Deployment Server", 
       images: ["https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", ...images.personal_cloud], 
       date: "July 2024",
       shortDescription: "Personal server with app deployment via Coolify",
       bulletPoints: [
-        "Formatted a Lenovo TS150 server with Ubuntu to self-host applications", 
-        "Set up a CI/CD pipeline using Coolify to manage multiple deployments",
-        "Published a guide to self-hosting"
+        "Configured a Lenovo TS150 server for self-hosting applications using the Coolify platform running on Ubuntu.",
+        "Set up a CI/CD pipeline for automatic deployment with Github webhooks, managing multiple deployments to custom domains.",
       ] 
     }, 
   ];
@@ -306,7 +305,8 @@ const PortfolioSection = () => {
         "Evaluated 8 document embedding models from the Hugging Face MTEB leaderboard for duplicate Github issue classification.",
         "Conducted extensive literature review of embeddings models for semantic search and retrieval tasks."
       ],
-      github: "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf"
+      github: "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf",
+      projectUrl: "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf"
     },
     {
       title: "Cellular Network Optimization with Reinforcement Learning",
@@ -317,7 +317,8 @@ const PortfolioSection = () => {
         "Researched the application of Constrained Markov Decision Processes to optimize cellular networks with unknown constraints.",
         "Delivered a presentation to a graduate research class."
       ],
-      github: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf"
+      github: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
+      projectUrl: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
     },
     {
       title: "Restricting The Use of LLM Web Crawlers",
@@ -327,7 +328,8 @@ const PortfolioSection = () => {
       points: [
         "Proposed a convention for regulating LLM web crawlers; similar implementation later adopted by OpenAI."
       ],
-      medium: "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04"
+      medium: "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04",
+      projectUrl: "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04"
     }
   ];
 
