@@ -59,7 +59,7 @@ const AboutMe = () => (
       </div>
       <p className="text-gray-700">
       Hi! My name is Mikhail (Misha) Sinitcyn. I'm a 4th year Computer Science student at Simon Fraser University.
-      I have developed enterprise applications and machine learning solutions professionally for FortisBC and SAP.
+      I have developed enterprise applications and machine learning solutions professionally for SAP and FortisBC.
       In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium.
       {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
     
@@ -91,7 +91,7 @@ const Experience = () => (
     <ExperienceItem 
       company="SAP" 
       role="Data Science Intern" 
-      period="May 2024 - Present"
+      period="May 2024 - September 2024"
       responsibilities={[
         "Developed a multi-agent system for automated contract assessment with Doctran and SAP Gen-AI SDK.",
         "Trained and evaluated an ensemble of natural language models with BERT and sk-learn using MLflow.",
@@ -238,7 +238,7 @@ const PortfolioSection = () => {
     {
       title: "MLChat",
       images: [...images.mlchat],
-      date: "May 2024)",
+      date: "May 2024",
       shortDescription: "AI-powered learning platform (Google AI Hackathon)",
       // fullDescription: "A learning platform with a chatbot that answers machine learning questions.",
       bulletPoints: [
