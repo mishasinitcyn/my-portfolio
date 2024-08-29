@@ -236,7 +236,7 @@ const PortfolioSection = () => {
       youtube: "https://www.youtube.com/watch?v=yNBtKRospZs"
     },
     {
-      title: "MLChat",
+      title: "MLChat.chat",
       images: [...images.mlchat],
       date: "May 2024",
       shortDescription: "AI-powered learning platform (Google AI Hackathon)",
@@ -248,7 +248,7 @@ const PortfolioSection = () => {
         "Deployed Angular frontend and fastAPI backend on Google Cloud Run as Docker images with custom nginx server configuration."
 
       ],
-      projectUrl: 'https://youtu.be/sGYPFMAnqSw',
+      projectUrl: 'https://mlchat.chat',
       github: "https://github.com/mishasinitcyn/MLChat/",
       medium: "https://medium.com/@msa242/mlchat-a-retrieval-augmented-generation-rag-learning-platform-4f5a5601fcff",
       youtube: 'https://youtu.be/sGYPFMAnqSw'
