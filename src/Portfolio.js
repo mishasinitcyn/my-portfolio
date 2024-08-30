@@ -227,8 +227,9 @@ const PortfolioSection = () => {
       // fullDescription: "An application for removing spam issues from GitHub repositories.",
       bulletPoints: [
         "Developed a Github administration tool for adding rules and removing spam issues using the Octokit API.",
-        "Lead a team of junior developers in collecting a novel dataset of spam GitHub issues and trained a classification model.",
-        "Self-hosted the Dockerized application with Postgres database on Lenovo server running Coolify for CI/CD.",
+        "Self-hosted the Dockerized application with Postgres database on personal Lenovo server running Coolify.",
+        "Led a team of developers in collecting a novel dataset of spam GitHub issues and trained a classification model."
+
       ],
       projectUrl: "https://repocleanup.com",
       github: "https://github.com/mishasinitcyn/RepoCleanup",
@@ -260,7 +261,7 @@ const PortfolioSection = () => {
       shortDescription: "Proprietary document system sold to FortisBC",
       // fullDescription: "A document management application for creating, editing, storing, and exporting documents.",
       bulletPoints: [
-        "Engineered and sold a document management application to FortisBC, now utilized by over 1000 employees as the primary point of internal document management within the $30-billion organization.",
+        "Worked in a team of 5 developers on a document management application, now utilized by over 1000 employees as the primary point of internal document management within the organization.",
         "Integrated Azure Active Directory for secure user authentication and user-specific permissions across the application.",
         "Implemented a PDF export feature with dynamic styling and formatting."
 
@@ -276,7 +277,7 @@ const PortfolioSection = () => {
       shortDescription: "Postgres Database with React app on Heroku",
       // fullDescription: "An application for hospital administrators to efficiently manage the entire lifecycle of blood, from donation to utilization, across multiple facilities.",
       bulletPoints: [
-        "Developed and deployed a Postgres database on Heroku.",
+        "Developed and deployed a Postgres database on Heroku, enabling hospital administrators to efficiently manage the entire lifecycle of blood, from donation to utilization, across multiple facilities.",
         "Composed advanced SQL queries, enforced BCNF normalization standards to optimize data integrity and query efficiency."
       ],
       projectUrl: "https://github.com/n-maido/blood-bank-database",
