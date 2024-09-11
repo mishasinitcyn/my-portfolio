@@ -267,8 +267,8 @@ const PortfolioSection = () => {
 
       ],
       // github: "#",
-      // projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
-      // youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
+      projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
+      youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
     },
     {
       title: "Blood Bank Database",
