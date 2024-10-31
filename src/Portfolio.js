@@ -23,7 +23,7 @@ const ProfileHeader = ({ profilePicture }) => (
       <img src={profilePicture} alt="Profile" className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full mb-4 md:mb-0 md:mr-8 object-cover"/>
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">Mikhail Sinitcyn</h1>
-        <p className="text-xl text-gray-600 mb-4">Software Engineer. "Indie Hacker".</p>
+        <p className="text-xl text-gray-600 mb-4">Incoming Quant Developer Intern @ RBC</p>
         <div className="flex justify-center md:justify-start space-x-4">
           <a href="https://github.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-black">
             <GithubIcon />
@@ -49,7 +49,7 @@ const AboutMe = () => (
     <h2 className="text-2xl font-bold mb-4">About Me</h2>
     <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
       <p className="mb-4">
-        <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"{{CS Student at SFU}}"}</span> prev @ 🚀 SAP 
+        <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"CS Student at SFU"}</span> prev @ 🚀 SAP 
       </p>
       <div className="flex flex-wrap gap-2 mb-4">
         <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Software Development</span>
