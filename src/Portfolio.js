@@ -1,7 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import profilePicture from './img/misha.jpeg'
 import SAPLogo from './img/SAP.png'
-import { GithubIcon, MediumIcon, LinkedInIcon, XIcon, YoutubeIcon } from './assets/svg/icons';
+import RBCLogo from './img/RBC.png'
+import { GithubIcon, MediumIcon, LinkedInIcon, XIcon, YoutubeIcon, RBCIcon } from './assets/svg/icons';
 
 const importAll = (r) => {
   let images = {};
@@ -23,7 +24,7 @@ const ProfileHeader = ({ profilePicture }) => (
       <img src={profilePicture} alt="Profile" className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full mb-4 md:mb-0 md:mr-8 object-cover"/>
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">Mikhail Sinitcyn</h1>
-        <p className="text-xl text-gray-600 mb-4">Incoming Quant Developer Intern @ RBC</p>
+        <p className="text-xl text-gray-600 mb-4">Quantitative Developer Intern @ RBC</p>
         <div className="flex justify-center md:justify-start space-x-4">
           <a href="https://github.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-black">
             <GithubIcon />
@@ -34,9 +35,9 @@ const ProfileHeader = ({ profilePicture }) => (
           <a href="https://www.linkedin.com/in/mikhail-sinitcyn-8909b5224/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
             <LinkedInIcon />
           </a>
-          <a href="https://twitter.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#1DA1F2]">
+          {/* <a href="https://twitter.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#1DA1F2]">
             <XIcon />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
@@ -49,18 +50,19 @@ const AboutMe = () => (
     <h2 className="text-2xl font-bold mb-4">About Me</h2>
     <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
       <p className="mb-4">
-        <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"CS Student at SFU"}</span> prev @ 🚀 SAP 
+        {/* <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"CS Student at SFU"}</span> prev @ 🚀 SAP  */}
+        <span className="font-mono text-gray-800  px-2 py-1 rounded">{"Computer Science student at SFU"}</span>
       </p>
       <div className="flex flex-wrap gap-2 mb-4">
         <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Software Development</span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Cloud Infrastructure</span>
+        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">Data Engineering</span>
         <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded">Machine Learning</span>
-        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Database Systems</span>
-        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">DevOps</span>
       </div>
       <p className="text-gray-700">
-      Hi! My name is Mikhail (Misha) Sinitcyn. I'm a 4th year Computer Science student at Simon Fraser University.
-      I have developed enterprise applications and machine learning solutions professionally for SAP and FortisBC.
-      In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium.
+      Hi! My name is Mikhail (Misha) Sinitcyn. I'm a Computer Science student at Simon Fraser University.
+      Currently interning as a Quantitative Developer at RBC Global Asset Management, having previously developed enterprise applications at SAP and built a document management system for FortisBC.
+      {/* In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium. */}
       {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
     
       </p>
@@ -68,36 +70,70 @@ const AboutMe = () => (
   </div>
 );
 
-const ExperienceItem = ({ company, role, period, responsibilities }) => (
-  <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
-    <div className="flex items-center mb-2">
-      <img src={SAPLogo} alt={company} className="h-[20px] mr-4 object-cover" />
-      <div>
-        <h3 className="font-semibold">{role} @ {company}</h3>
-        <p className="text-gray-600">{period}</p>
+
+const ExperienceItem = ({ company, role, period, responsibilities }) => {
+  const getCompanyLogo = (companyName) => {
+    switch (companyName) {
+      case 'RBC':
+        return RBCLogo;
+      case 'SAP':
+        return SAPLogo;
+      default:
+        return SAPLogo;
+    }
+  };
+
+  const getLogoHeight = (companyName) => {
+    switch (companyName) {
+      case 'RBC':
+        return 'h-11';
+      default:
+        return 'h-5';
+    }
+  };
+
+  return (
+    <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
+      <div className="flex items-center mb-2">
+        <img 
+          src={getCompanyLogo(company)} 
+          alt={`${company} logo`} 
+          className={`${getLogoHeight(company)} mr-4 object-cover`} 
+        />
+        <div>
+          <h3 className="font-semibold">{role} @ {company}</h3>
+          <p className="text-gray-600">{period}</p>
+        </div>
       </div>
+      <ul className="list-disc pl-12 text-gray-700">
+        {responsibilities.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
-    <ul className="list-disc pl-12 text-gray-700">
-      {responsibilities.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  </div>
-);
+  );
+};
 
 const Experience = () => (
   <div >
     <h1 className="text-2xl font-bold mb-4">Professional Experience</h1>
     <ExperienceItem 
+      company="RBC" 
+      role="Quantitative Developer Intern" 
+      period="January 2025 - Present"
+      responsibilities={[
+        "Data infrastructure and financial modeling"
+      ]}
+    />
+    <ExperienceItem 
       company="SAP" 
       role="Data Science Intern" 
       period="May 2024 - September 2024"
       responsibilities={[
-        "Developed a multi-agent system for automated contract assessment with Doctran and SAP Gen-AI SDK.",
-        "Trained and evaluated an ensemble of natural language models with BERT and sk-learn using MLflow.",
-        "Deployed machine learning models in production with Docker, FastAPI and Gradio.",
-        "Wrote ETL scripts to transform, cluster, and visualize long-form text data."
-
+        "Engineered a multi-agent system for automated contract analysis, contributing to SAP's global compliance platform",
+        "Trained and evaluated natural language classifiers using MLflow, deployed with Docker, FastAPI and Gradio",
+        "Wrote ETL scripts to transform, cluster, and visualize long-form text data for machine learning operations",
+        "Created semi-supervised LLM evaluations, ensuring expert-level report generation"
       ]}
     />
     <ExperienceItem 
@@ -105,13 +141,10 @@ const Experience = () => (
       role="Software Engineer Intern" 
       period="Jan 2023 - Sep 2023"
       responsibilities={[
-        "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%.",
-        "Deployed application to Apache HTTP server, configured custom routes and bash scripts.",
-        "Facilitated data delivery pipeline to the analytics team, parsing and transporting large volumes of MongoDB data to Azure Data Lake.",
-        "Wrote API tests using Postman, frontend unit tests with Jest, and UI tests with Selenium, providing full application coverage.", 
-        "Designed medium-fidelity Figma prototypes after conducting user requirements elicitation with the product owner.",
-        "Evaluated document embeddings models, including OpenAI’s Ada, for clustering and k-nearest neighbors classification."
-
+        "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%",
+        "Deployed application to Apache HTTP server, configured custom Nginx routes and Bash scripts",
+        "Facilitated data pipeline to the analytics team, parsing and transporting MongoDB data to Azure Data Lake via cronjob",
+        "Wrote API tests using Postman, frontend unit tests with Jest, and UI tests with Selenium"
       ]}
     />
   </div>
