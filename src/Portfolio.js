@@ -304,6 +304,29 @@ const PortfolioSection = () => {
       youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
     },
     {
+      title:"Personal Deployment Server", 
+      images: ["https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", ...images.personal_cloud], 
+      date: "July 2024",
+      shortDescription: "Personal server with app deployment via Coolify",
+      bulletPoints: [
+        "Configured a Lenovo TS150 server for self-hosting applications using the Coolify platform running on Ubuntu.",
+        "Set up a CI/CD pipeline for automatic deployment with Github webhooks, managing multiple deployments to custom domains.",
+      ] 
+    }, 
+    {
+      title:"Netflix Recommendation Engine", 
+      images: ["https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940", ...images.netflix], 
+      date: "December 2024",
+      shortDescription: "Movie recommendation model using XGBoost",
+      bulletPoints: [
+        "Implemented a movie recommendation engine using XGBoost, performed hyperparameter tuning with random search",
+        "Engineered user preference features by merging Netflix ratings data with the IMDb movies dataset",
+        "Modeled trends in user activity via clustering and outlier detection"
+      ],
+      projectUrl: "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine/blob/main/report.pdf",
+      github: "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine",
+    }, 
+    {
       title: "Blood Bank Database",
       images: [...images.bloodbank],
       date: "June-July 2024",
@@ -317,16 +340,6 @@ const PortfolioSection = () => {
       github: "https://github.com/n-maido/blood-bank-database",
       // youtube: "#"
     },
-    {
-      title:"Personal Deployment Server", 
-      images: ["https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", ...images.personal_cloud], 
-      date: "July 2024",
-      shortDescription: "Personal server with app deployment via Coolify",
-      bulletPoints: [
-        "Configured a Lenovo TS150 server for self-hosting applications using the Coolify platform running on Ubuntu.",
-        "Set up a CI/CD pipeline for automatic deployment with Github webhooks, managing multiple deployments to custom domains.",
-      ] 
-    }, 
   ];
 
   const publications = [
@@ -353,6 +366,19 @@ const PortfolioSection = () => {
       ],
       github: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
       projectUrl: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
+    },
+    {
+      title: "Compiler Optimization Analysis of the Levenshtein Distance Algorithm",
+      date: "July 2024",
+      images: [...images.compiler_levenshtein],
+      shortDescription: "Analysis of GNU compiler optimization using Perf",
+      points: [
+        "Analyzed GNU compiler optimizations resulting in 35-50% runtime reduction between optimization levels",
+        "Conducted experimental evaluation of branch prediction performance across different sequence pair types using the Perf tool",
+        "Demonstrated 100-fold improvement in branch prediction for substring and duplicate sequence pairs"
+      ],
+      github: "https://github.com/mishasinitcyn/GNU-Compiler-Analysis-Levenshtein-Distance-Algorithm/blob/main/report.pdf",
+      projectUrl: "https://github.com/mishasinitcyn/GNU-Compiler-Analysis-Levenshtein-Distance-Algorithm/blob/main/report.pdf"
     },
     {
       title: "Restricting The Use of LLM Web Crawlers",
@@ -388,7 +414,7 @@ const PortfolioSection = () => {
         />
       )}
       <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Publications</h2>
+        <h2 className="text-2xl font-bold mb-4">Research and Publications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {publications.map((item, index) => (
             <ProjectCard 
