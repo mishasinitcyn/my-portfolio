@@ -122,7 +122,7 @@ const Experience = () => (
       role="Quantitative Developer Intern" 
       period="January 2025 - Present"
       responsibilities={[
-        "Data infrastructure and financial modeling"
+        "Cloud infrastructure and data engineering"
       ]}
     />
     <ExperienceItem 
