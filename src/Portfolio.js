@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import profilePicture from './img/misha.jpeg'
 import SAPLogo from './img/SAP.png'
 import RBCLogo from './img/RBC.png'
+import DoculaLogo from './img/Docula.jpeg'
 import { GithubIcon, MediumIcon, LinkedInIcon, XIcon, YoutubeIcon, RBCIcon } from './assets/svg/icons';
 
 const importAll = (r) => {
@@ -48,20 +49,16 @@ const ProfileHeader = ({ profilePicture }) => (
 const AboutMe = () => (
   <div>
     <h2 className="text-2xl font-bold mb-4">About Me</h2>
-    <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
-      <p className="mb-4">
-        {/* <span className="font-mono text-gray-800 bg-gray-100 px-2 py-1 rounded">{"CS Student at SFU"}</span> prev @ 🚀 SAP  */}
-        <span className="font-mono text-gray-800  px-2 py-1 rounded">{"Computer Science student at SFU"}</span>
-      </p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Software Development</span>
-        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Cloud Infrastructure</span>
-        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">Data Engineering</span>
-        <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded">Machine Learning</span>
+    <div className="bg-white rounded-lg p-6 mb-8 border border-gray-100 shadow-sm">
+       <div className="flex flex-wrap gap-2 mb-4">
+        <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-small text-blue-700 bg-gradient-to-b from-blue-100 to-blue-50">Software Development</span>
+        <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-small text-green-700 bg-gradient-to-b from-green-100 to-green-50">Cloud Infrastructure</span>
+        <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-small text-purple-700 bg-gradient-to-b from-purple-100 to-purple-50">Data Engineering</span>
+        <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-small text-pink-700 bg-gradient-to-b from-pink-100 to-pink-50">Machine Learning</span>
       </div>
       <p className="text-gray-700">
-      Hi! My name is Mikhail (Misha) Sinitcyn. I'm a Computer Science student at Simon Fraser University.
-      Currently interning as a Quantitative Developer at RBC Global Asset Management, having previously developed enterprise applications at SAP and built a document management system for FortisBC.
+      Hi! I'm Misha. <br></br>
+      Currently interning as a quant dev at RBC and working on my startup Docula.
       {/* In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium. */}
       {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
     
@@ -78,6 +75,8 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
         return RBCLogo;
       case 'SAP':
         return SAPLogo;
+      case 'Docula':
+        return DoculaLogo;
       default:
         return SAPLogo;
     }
@@ -87,13 +86,15 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
     switch (companyName) {
       case 'RBC':
         return 'h-11';
+      case 'Docula':
+        return 'h-11';
       default:
         return 'h-5';
     }
   };
 
   return (
-    <div className="bg-white rounded-lg p-6 mb-8 shadow-md">
+    <div className="bg-white rounded-lg p-6 mb-8 border border-gray-100 shadow-sm">
       <div className="flex items-center mb-2">
         <img 
           src={getCompanyLogo(company)} 
@@ -122,7 +123,19 @@ const Experience = () => (
       role="Quantitative Developer Intern" 
       period="January 2025 - Present"
       responsibilities={[
-        "Cloud infrastructure and data engineering"
+        "Migrating $25 billion quantitative investment platform to microservices running on Openshift Kubernetes",
+        "Monitoring and debugging daily data scripts handling 100GB+ workloads, serving as a reliability engineer",
+        "Automating financial market data pipelines with Airflow and FastAPI"
+      ]}
+    />
+    <ExperienceItem 
+      company="Docula" 
+      role="Co-founder" 
+      period="February 2025 - Present"
+      responsibilities={[
+        "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing functionality with state-of-the-art AI models",
+        "Secured a $120k contract with a medical billing company; deployed a private instance on an Ubuntu server",
+        "Self-hosted open source Slack and Jira alternatives for internal company management"
       ]}
     />
     <ExperienceItem 
@@ -152,7 +165,7 @@ const Experience = () => (
 
 const ProjectCard = ({ item, onClick }) => (
   <div 
-    className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+    className="bg-white rounded-lg overflow-hidden cursor-pointer border border-gray-300 shadow-md"
     onClick={onClick}
   >
     <img src={item.images[0]} alt={item.title} className="w-full h-48 object-cover cursor-pointer" />
@@ -253,6 +266,22 @@ const PortfolioSection = () => {
 
   const projects = [
     {
+      title: "(Acquired) Document Management Application",
+      images: [...images.fortisbc],
+      date: "March-April 2022",
+      shortDescription: "Proprietary document system sold to FortisBC",
+      // fullDescription: "A document management application for creating, editing, storing, and exporting documents.",
+      bulletPoints: [
+        "Worked in a team of 5 developers on a document management application, now utilized by over 1000 employees as the primary point of internal document management within the organization.",
+        "Integrated Azure Active Directory for secure user authentication and user-specific permissions across the application.",
+        "Implemented a PDF export feature with dynamic styling and formatting."
+
+      ],
+      // github: "#",
+      projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
+      youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
+    },
+    {
       title: "RepoCleanup.com",
       images: [...images.repocleanup],
       date: "June 2024 - August 2024",
@@ -286,22 +315,6 @@ const PortfolioSection = () => {
       github: "https://github.com/mishasinitcyn/MLChat/",
       medium: "https://medium.com/@msa242/mlchat-a-retrieval-augmented-generation-rag-learning-platform-4f5a5601fcff",
       youtube: 'https://youtu.be/sGYPFMAnqSw'
-    },
-    {
-      title: "(Acquired) Document Management Application",
-      images: [...images.fortisbc],
-      date: "March-April 2022",
-      shortDescription: "Proprietary document system sold to FortisBC",
-      // fullDescription: "A document management application for creating, editing, storing, and exporting documents.",
-      bulletPoints: [
-        "Worked in a team of 5 developers on a document management application, now utilized by over 1000 employees as the primary point of internal document management within the organization.",
-        "Integrated Azure Active Directory for secure user authentication and user-specific permissions across the application.",
-        "Implemented a PDF export feature with dynamic styling and formatting."
-
-      ],
-      // github: "#",
-      projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
-      youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
     },
     {
       title:"Personal Deployment Server", 
@@ -459,19 +472,6 @@ const Portfolio = () => {
           height: 100%;
           width: 100%;
           background: radial-gradient(125% 125% at 50% 10%, white 40%, blue 100%);
-          // background: radial-gradient(125% 125% at 50% 10%, #eaeaea 40%, #63e 100%);
-        }
-        .background-container::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          z-index: -9;
-          height: 100%;
-          width: 100%;
-          // background: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
-          //             linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
-          background-size: 20px 20px;
-          mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
         }
       `}</style>
       
