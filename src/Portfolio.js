@@ -123,9 +123,9 @@ const Experience = () => (
       role="Quantitative Developer Intern" 
       period="January 2025 - Present"
       responsibilities={[
-        "Migrating $25 billion quantitative investment platform to microservices running on Openshift Kubernetes",
-        "Monitoring and debugging daily data scripts handling 100GB+ workloads, serving as a reliability engineer",
-        "Automating financial market data pipelines with Airflow and FastAPI"
+        "Migrating $25 billion quantitative investment platform to Databricks, implementing financial data models in Python",
+        "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
+        "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
       ]}
     />
     <ExperienceItem 
@@ -135,6 +135,7 @@ const Experience = () => (
       responsibilities={[
         "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing functionality with state-of-the-art AI models",
         "Secured a $120k contract with a medical billing company; deployed a private instance on an Ubuntu server",
+        "Designed an SQL database with indexing, scheduled file deletion, edit history, and logging for usage-based billing with Stripe",
         "Self-hosted open source Slack and Jira alternatives for internal company management"
       ]}
     />
@@ -143,9 +144,9 @@ const Experience = () => (
       role="Data Science Intern" 
       period="May 2024 - September 2024"
       responsibilities={[
-        "Engineered a multi-agent system for automated contract analysis, contributing to SAP's global compliance platform",
+        "Engineered a multi-agent system for automated contract analysis, selected as the department's research project of the year",
         "Trained and evaluated natural language classifiers using MLflow, deployed with Docker, FastAPI and Gradio",
-        "Wrote ETL scripts to transform, cluster, and visualize long-form text data for machine learning operations",
+        "Wrote ETL scripts to transform, cluster, and visualize documents for machine learning operations",
         "Created semi-supervised LLM evaluations, ensuring expert-level report generation"
       ]}
     />
@@ -156,7 +157,7 @@ const Experience = () => (
       responsibilities={[
         "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%",
         "Deployed application to Apache HTTP server, configured custom Nginx routes and Bash scripts",
-        "Facilitated data pipeline to the analytics team, parsing and transporting MongoDB data to Azure Data Lake via cronjob",
+        // "Facilitated data pipeline to the analytics team, parsing and transporting MongoDB data to Azure Data Lake via cronjob",
         "Wrote API tests using Postman, frontend unit tests with Jest, and UI tests with Selenium"
       ]}
     />
