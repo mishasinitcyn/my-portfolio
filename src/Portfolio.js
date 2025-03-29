@@ -41,9 +41,9 @@ const ProfileHeader = ({ profilePicture }) => (
           <a href="https://www.linkedin.com/in/mikhail-sinitcyn-8909b5224/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
             <LinkedInIcon />
           </a>
-          {/* <a href="https://twitter.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#1DA1F2]">
+          <a href="https://twitter.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#1DA1F2]">
             <XIcon />
-          </a> */}
+          </a>
         </div>
       </div>
     </div>
@@ -131,13 +131,15 @@ const Experience = () => (
 
 const ProjectCard = ({ item, onClick }) => (
   <div 
-    className="bg-white rounded-lg overflow-hidden cursor-pointer border border-gray-300 shadow-md"
+    className="bg-white rounded-lg overflow-hidden cursor-pointer border border-gray-300 shadow-md hover:shadow-lg transition-shadow"
     onClick={onClick}
   >
-    <img src={item.images[0]} alt={item.title} className="w-full h-48 object-cover cursor-pointer" />
-    <div className="p-4">
-      <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-      <p className="text-gray-600">{item.shortDescription || item.date}</p>
+    <div className="aspect-w-16 aspect-h-9">
+      <img src={item.images[0]} alt={item.title} className="w-full h-48 sm:h-40 md:h-48 object-cover cursor-pointer" />
+    </div>
+    <div className="p-3 sm:p-4">
+      <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 line-clamp-1">{item.title}</h3>
+      <p className="text-gray-600 text-sm sm:text-base line-clamp-2">{item.shortDescription || item.date}</p>
     </div>
   </div>
 );
@@ -184,25 +186,27 @@ const ProjectModal = ({ item, onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={handleOutsideClick}>
-      <div className="bg-white p-6 rounded-lg max-w-2xl w-full m-4 max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="float-right font-bold text-2xl">&times;</button>
-        <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
-        <p className="text-gray-600 mb-4">{item.date}</p>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4" onClick={handleOutsideClick}>
+      <div className="bg-white p-4 sm:p-6 rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="flex justify-between items-center mb-3">
+          <h2 className="text-xl sm:text-2xl font-bold">{item.title}</h2>
+          <button onClick={onClose} className="text-2xl font-bold">&times;</button>
+        </div>
+        <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">{item.date}</p>
         {item.images && item.images.length > 0 && (
           <ImageCarousel images={item.images} projectUrl={item.projectUrl} />
         )}
-        <ul className="list-disc pl-5 mb-4">
+        <ul className="list-disc pl-5 mb-4 text-sm sm:text-base">
           {item.bulletPoints ? item.bulletPoints.map((point, index) => (
-            <li key={index}>{point}</li>
+            <li key={index} className="mb-1">{point}</li>
           )) : item.points.map((point, index) => (
-            <li key={index}>{point}</li>
+            <li key={index} className="mb-1">{point}</li>
           ))}
         </ul>
         {item.abstract && (
           <div className="mb-4">
-            <h3 className="text-xl font-semibold mb-2">Abstract</h3>
-            <p className="text-gray-700">{item.abstract}</p>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Abstract</h3>
+            <p className="text-gray-700 text-sm sm:text-base">{item.abstract}</p>
           </div>
         )}
         <div className="flex justify-end space-x-4">
@@ -302,7 +306,7 @@ const PortfolioSection = () => {
 const Portfolio = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <div className="relative z-10 container mx-auto p-8">
+      <div className="relative z-10 container mx-auto px-4 py-4 sm:p-8">
         <ProfileHeader profilePicture={profilePicture} />
         <AboutMe />
         <Experience />
