@@ -1,0 +1,52 @@
+{
+  "publications": [
+    {
+      "title": "Document Embeddings for Duplicate Github Issue Detection",
+      "date": "April 2024",
+      "shortDescription": "Evaluation of document embedding models for issue classification",
+      "points": [
+        "Evaluated 8 document embedding models from the Hugging Face MTEB leaderboard for duplicate Github issue classification.",
+        "Conducted extensive literature review of embeddings models for semantic search and retrieval tasks."
+      ],
+      "github": "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf",
+      "projectUrl": "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf",
+      "imageFolder": "documentembeddings"
+    },
+    {
+      "title": "Cellular Network Optimization with Reinforcement Learning",
+      "date": "December 2023",
+      "shortDescription": "Application of CMDPs to cellular network optimization",
+      "points": [
+        "Researched the application of Constrained Markov Decision Processes to optimize cellular networks with unknown constraints.",
+        "Delivered a presentation to a graduate research class."
+      ],
+      "github": "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
+      "projectUrl": "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
+      "imageFolder": "cmdp"
+    },
+    {
+      "title": "Compiler Optimization Analysis of the Levenshtein Distance Algorithm",
+      "date": "July 2024",
+      "shortDescription": "Analysis of GNU compiler optimization using Perf",
+      "points": [
+        "Analyzed GNU compiler optimizations resulting in 35-50% runtime reduction between optimization levels",
+        "Conducted experimental evaluation of branch prediction performance across different sequence pair types using the Perf tool",
+        "Demonstrated 100-fold improvement in branch prediction for substring and duplicate sequence pairs"
+      ],
+      "github": "https://github.com/mishasinitcyn/GNU-Compiler-Analysis-Levenshtein-Distance-Algorithm/blob/main/report.pdf",
+      "projectUrl": "https://github.com/mishasinitcyn/GNU-Compiler-Analysis-Levenshtein-Distance-Algorithm/blob/main/report.pdf",
+      "imageFolder": "compiler_levenshtein"
+    },
+    {
+      "title": "Restricting The Use of LLM Web Crawlers",
+      "date": "June 2023",
+      "shortDescription": "Proposal for regulating LLM web crawlers",
+      "points": [
+        "Proposed a convention for regulating LLM web crawlers; similar implementation later adopted by OpenAI."
+      ],
+      "medium": "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04",
+      "projectUrl": "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04",
+      "imageFolder": "webcrawlers"
+    }
+  ]
+} 

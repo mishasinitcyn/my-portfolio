@@ -5,6 +5,11 @@ import RBCLogo from './img/RBC.png'
 import DoculaLogo from './img/Docula.jpeg'
 import { GithubIcon, MediumIcon, LinkedInIcon, XIcon, YoutubeIcon, RBCIcon } from './assets/svg/icons';
 
+// Import the JSON data
+import projectsData from './data/projects.json';
+import publicationsData from './data/publications.json';
+import experienceData from './data/experience.json';
+
 const importAll = (r) => {
   let images = {};
   r.keys().forEach((item) => {
@@ -57,8 +62,9 @@ const AboutMe = () => (
         <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-small text-pink-700 bg-gradient-to-b from-pink-100 to-pink-50">Machine Learning</span>
       </div>
       <p className="text-gray-700">
-      Hi! I'm Misha. <br></br>
-      Currently interning as a quant dev at RBC and working on my startup Docula.
+      Hi! I'm Misha. <br />
+      I'm currently interning as a quantitative developer at RBC where I'm spearheading the migration of a $25 billion quantitative investment platform to Databricks. 
+      Also working on my startup Docula, where I am responsible for our infrastructure, databases, and web security.
       {/* In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium. */}
       {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
     
@@ -69,17 +75,10 @@ const AboutMe = () => (
 
 
 const ExperienceItem = ({ company, role, period, responsibilities }) => {
-  const getCompanyLogo = (companyName) => {
-    switch (companyName) {
-      case 'RBC':
-        return RBCLogo;
-      case 'SAP':
-        return SAPLogo;
-      case 'Docula':
-        return DoculaLogo;
-      default:
-        return SAPLogo;
-    }
+  const logos = {
+    RBC: RBCLogo,
+    SAP: SAPLogo,
+    Docula: DoculaLogo
   };
 
   const getLogoHeight = (companyName) => {
@@ -97,7 +96,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
     <div className="bg-white rounded-lg p-6 mb-8 border border-gray-100 shadow-sm">
       <div className="flex items-center mb-2">
         <img 
-          src={getCompanyLogo(company)} 
+          src={logos[company]} 
           alt={`${company} logo`} 
           className={`${getLogoHeight(company)} mr-4 object-cover`} 
         />
@@ -116,51 +115,17 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
 };
 
 const Experience = () => (
-  <div >
+  <div>
     <h1 className="text-2xl font-bold mb-4">Professional Experience</h1>
-    <ExperienceItem 
-      company="RBC" 
-      role="Quantitative Developer Intern" 
-      period="January 2025 - Present"
-      responsibilities={[
-        "Migrating $25 billion quantitative investment platform to Databricks, implementing financial data models in Python",
-        "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
-        "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
-      ]}
-    />
-    <ExperienceItem 
-      company="Docula" 
-      role="Co-founder" 
-      period="February 2025 - Present"
-      responsibilities={[
-        "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing functionality with state-of-the-art AI models",
-        "Secured a $120k contract with a medical billing company; deployed a private instance on an Ubuntu server",
-        "Designed an SQL database with indexing, scheduled file deletion, edit history, and logging for usage-based billing with Stripe",
-        "Self-hosted open source Slack and Jira alternatives for internal company management"
-      ]}
-    />
-    <ExperienceItem 
-      company="SAP" 
-      role="Data Science Intern" 
-      period="May 2024 - September 2024"
-      responsibilities={[
-        "Engineered a multi-agent system for automated contract analysis, selected as the department's research project of the year",
-        "Trained and evaluated natural language classifiers using MLflow, deployed with Docker, FastAPI and Gradio",
-        "Wrote ETL scripts to transform, cluster, and visualize documents for machine learning operations",
-        "Created semi-supervised LLM evaluations, ensuring expert-level report generation"
-      ]}
-    />
-    <ExperienceItem 
-      company="SAP" 
-      role="Software Engineer Intern" 
-      period="Jan 2023 - Sep 2023"
-      responsibilities={[
-        "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%",
-        "Deployed application to Apache HTTP server, configured custom Nginx routes and Bash scripts",
-        // "Facilitated data pipeline to the analytics team, parsing and transporting MongoDB data to Azure Data Lake via cronjob",
-        "Wrote API tests using Postman, frontend unit tests with Jest, and UI tests with Selenium"
-      ]}
-    />
+    {experienceData.experience.map((item, index) => (
+      <ExperienceItem 
+        key={index}
+        company={item.company}
+        role={item.role}
+        period={item.period}
+        responsibilities={item.responsibilities}
+      />
+    ))}
   </div>
 );
 
@@ -265,147 +230,32 @@ const ProjectModal = ({ item, onClose }) => {
 const PortfolioSection = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const projects = [
-    {
-      title: "(Acquired) Document Management Application",
-      images: [...images.fortisbc],
-      date: "March-April 2022",
-      shortDescription: "Proprietary document system sold to FortisBC",
-      // fullDescription: "A document management application for creating, editing, storing, and exporting documents.",
-      bulletPoints: [
-        "Worked in a team of 5 developers on a document management application, now utilized by over 1000 employees as the primary point of internal document management within the organization.",
-        "Integrated Azure Active Directory for secure user authentication and user-specific permissions across the application.",
-        "Implemented a PDF export feature with dynamic styling and formatting."
-
-      ],
-      // github: "#",
-      projectUrl: "https://www.youtube.com/embed/BQbco5ynQIs",
-      youtube: "https://www.youtube.com/embed/BQbco5ynQIs"
-    },
-    {
-      title: "RepoCleanup.com",
-      images: [...images.repocleanup],
-      date: "June 2024 - August 2024",
-      shortDescription: "GitHub administration application",
-      // fullDescription: "An application for removing spam issues from GitHub repositories.",
-      bulletPoints: [
-        "Developed a Github administration tool for adding rules and removing spam issues using the Octokit API.",
-        "Self-hosted the Dockerized application with Postgres database on personal Lenovo server running Coolify.",
-        "Led a team of developers in collecting a novel dataset of spam GitHub issues and trained a classification model."
-
-      ],
-      projectUrl: "https://repocleanup.com",
-      github: "https://github.com/mishasinitcyn/RepoCleanup",
-      // medium: "#",
-      youtube: "https://www.youtube.com/watch?v=yNBtKRospZs"
-    },
-    {
-      title: "MLChat.chat",
-      images: [...images.mlchat],
-      date: "May 2024",
-      shortDescription: "AI-powered learning platform (Google AI Hackathon)",
-      // fullDescription: "A learning platform with a chatbot that answers machine learning questions.",
-      bulletPoints: [
-        "Created a learning platform with a chatbot that answers machine learning questions with direct references to textbook material.",
-        "Implemented a retrieval-augmented generation system using Pinecone vector database, mixedbread-ai, and Google Gemini.",
-        "Constructed a LangChain data pipeline to parse PDFs as Latex-encoded text documents, create embeddings, and upsert the database.",
-        "Deployed Angular frontend and fastAPI backend on Google Cloud Run as Docker images with custom nginx server configuration."
-
-      ],
-      projectUrl: 'https://mlchat.chat',
-      github: "https://github.com/mishasinitcyn/MLChat/",
-      medium: "https://medium.com/@msa242/mlchat-a-retrieval-augmented-generation-rag-learning-platform-4f5a5601fcff",
-      youtube: 'https://youtu.be/sGYPFMAnqSw'
-    },
-    {
-      title:"Personal Deployment Server", 
-      images: ["https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png", ...images.personal_cloud], 
-      date: "July 2024",
-      shortDescription: "Personal server with app deployment via Coolify",
-      bulletPoints: [
-        "Configured a Lenovo TS150 server for self-hosting applications using the Coolify platform running on Ubuntu.",
-        "Set up a CI/CD pipeline for automatic deployment with Github webhooks, managing multiple deployments to custom domains.",
-      ] 
-    }, 
-    {
-      title:"Netflix Recommendation Engine", 
-      images: ["https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940", ...images.netflix], 
-      date: "December 2024",
-      shortDescription: "Movie recommendation model using XGBoost",
-      bulletPoints: [
-        "Implemented a movie recommendation engine using XGBoost, performed hyperparameter tuning with random search",
-        "Engineered user preference features by merging Netflix ratings data with the IMDb movies dataset",
-        "Modeled trends in user activity via clustering and outlier detection"
-      ],
-      projectUrl: "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine/blob/main/report.pdf",
-      github: "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine",
-    }, 
-    {
-      title: "Blood Bank Database",
-      images: [...images.bloodbank],
-      date: "June-July 2024",
-      shortDescription: "Postgres Database with React app on Heroku",
-      // fullDescription: "An application for hospital administrators to efficiently manage the entire lifecycle of blood, from donation to utilization, across multiple facilities.",
-      bulletPoints: [
-        "Developed and deployed a Postgres database on Heroku, enabling hospital administrators to efficiently manage the entire lifecycle of blood, from donation to utilization, across multiple facilities.",
-        "Composed advanced SQL queries, enforced BCNF normalization standards to optimize data integrity and query efficiency."
-      ],
-      projectUrl: "https://github.com/n-maido/blood-bank-database",
-      github: "https://github.com/n-maido/blood-bank-database",
-      // youtube: "#"
-    },
-  ];
-
-  const publications = [
-    {
-      title: "Document Embeddings for Duplicate Github Issue Detection",
-      date: "April 2024",
-      images: [...images.documentembeddings],
-      shortDescription: "Evaluation of document embedding models for issue classification",
-      points: [
-        "Evaluated 8 document embedding models from the Hugging Face MTEB leaderboard for duplicate Github issue classification.",
-        "Conducted extensive literature review of embeddings models for semantic search and retrieval tasks."
-      ],
-      github: "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf",
-      projectUrl: "https://github.com/mishasinitcyn/GitHub-Duplicate-Issue-Detection/blob/main/Document-Level%20Embeddings%20for%20Duplicate%20GitHub%20Issue%20Detection.pdf"
-    },
-    {
-      title: "Cellular Network Optimization with Reinforcement Learning",
-      date: "December 2023",
-      images: [...images.cmdp],
-      shortDescription: "Application of CMDPs to cellular network optimization",
-      points: [
-        "Researched the application of Constrained Markov Decision Processes to optimize cellular networks with unknown constraints.",
-        "Delivered a presentation to a graduate research class."
-      ],
-      github: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
-      projectUrl: "https://github.com/mishasinitcyn/Cellular-Network-Optimization-with-Reinforcement-Learning/blob/main/CMDPs%20with%20Unknown%20Constraints.pdf",
-    },
-    {
-      title: "Compiler Optimization Analysis of the Levenshtein Distance Algorithm",
-      date: "July 2024",
-      images: [...images.compiler_levenshtein],
-      shortDescription: "Analysis of GNU compiler optimization using Perf",
-      points: [
-        "Analyzed GNU compiler optimizations resulting in 35-50% runtime reduction between optimization levels",
-        "Conducted experimental evaluation of branch prediction performance across different sequence pair types using the Perf tool",
-        "Demonstrated 100-fold improvement in branch prediction for substring and duplicate sequence pairs"
-      ],
-      github: "https://github.com/mishasinitcyn/GNU-Compiler-Analysis-Levenshtein-Distance-Algorithm/blob/main/report.pdf",
-      projectUrl: "https://github.com/mishasinitcyn/GNU-Compiler-Analysis-Levenshtein-Distance-Algorithm/blob/main/report.pdf"
-    },
-    {
-      title: "Restricting The Use of LLM Web Crawlers",
-      date: "June 2023",
-      images: [...images.webcrawlers],
-      shortDescription: "Proposal for regulating LLM web crawlers",
-      points: [
-        "Proposed a convention for regulating LLM web crawlers; similar implementation later adopted by OpenAI."
-      ],
-      medium: "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04",
-      projectUrl: "https://medium.com/@msa242/restricting-the-use-of-llm-web-crawlers-99b353ac2f04"
+  // Process the images for each project/publication
+  const processImages = (item) => {
+    let processedImages = [];
+    
+    // Add any direct images first
+    if (item.images) {
+      processedImages = [...item.images];
     }
-  ];
+    
+    // Add images from the imageFolder if it exists
+    if (item.imageFolder && images[item.imageFolder]) {
+      processedImages = [...processedImages, ...images[item.imageFolder]];
+    }
+    
+    return processedImages;
+  };
+
+  const projects = projectsData.projects.map(project => ({
+    ...project,
+    images: processImages(project)
+  }));
+
+  const publications = publicationsData.publications.map(publication => ({
+    ...publication,
+    images: processImages(publication)
+  }));
 
   return (
     <div>
