@@ -6,7 +6,7 @@
       "period": "January 2025 - Present",
       "responsibilities": [
         "Spearheading migration of $25 billion quantitative investment platform to Databricks",
-        "Significantly improved performance of backtesting model by implementing high-dimensional time series data structure",
+        "Reimplementing proprietary multi-dimensional time series data structure to enable parallel backtesting of quantitative strategies",
         "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
         "Proactively pen-tested and resolved security vulnerabilities in production",
         "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
