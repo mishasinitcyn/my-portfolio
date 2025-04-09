@@ -63,7 +63,7 @@ const AboutMe = () => (
       </div>
       <p className="text-gray-700">
       Hi! I'm Misha. <br />
-      I'm currently interning as a quantitative developer at RBC where I'm spearheading the migration of a $25 billion quantitative investment platform to Databricks. 
+      I'm currently interning as a quantitative developer at RBC where I'm working on scientific computing and spearheading the migration of our $25 billion quantitative investment platform to Databricks. 
       Also working on my startup Docula, where I am responsible for our infrastructure, databases, and web security.
       {/* In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium. */}
       {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
