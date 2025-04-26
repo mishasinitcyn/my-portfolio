@@ -5,10 +5,10 @@
       "role": "Quantitative Developer Intern",
       "period": "January 2025 - Present",
       "responsibilities": [
-        "Spearheading migration of $25 billion quantitative investment platform to Databricks",
-        "Reimplementing proprietary multi-dimensional time series data structure to enable parallel backtesting of quantitative strategies",
+        "Building data access layer for quantitative platform on Azure Databricks",
+        "Migrated proprietary data structure to netCDF, resulting in %50 file size reduction",
         "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
-        "Proactively pen-tested and resolved security vulnerabilities in production",
+        "Proactively pen-tested and resolved security vulnerabilities",
         "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
       ],
       "logo": "RBC"
@@ -19,8 +19,8 @@
       "period": "January 2025 - Present",
       "responsibilities": [
         "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing functionality with state-of-the-art AI models",
-        "Secured a $120k contract with a medical billing company; deployed a private instance on an Ubuntu server",
-        "Designed an SQL database with indexing, scheduled file deletion, edit history, and logging for usage-based billing with Stripe",
+        "Secured a $120k contract with a medical billing company to provision a private deployment on an Ubuntu server",
+        "Designed an SQL database with object storage, indexing, edit history, and logging for usage-based billing",
         "Self-hosted open source Slack and Jira alternatives for internal company management"
       ],
       "logo": "Docula"
@@ -40,7 +40,7 @@
     {
       "company": "SAP",
       "role": "Software Engineer Intern",
-      "period": "Jan 2023 - Sep 2023",
+      "period": "January 2023 - September 2023",
       "responsibilities": [
         "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%",
         "Deployed application to Apache HTTP server, configured custom Nginx routes and Bash scripts",
