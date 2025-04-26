@@ -6,7 +6,7 @@
       "period": "January 2025 - Present",
       "responsibilities": [
         "Building data access layer for quantitative platform on Azure Databricks",
-        "Migrated proprietary data structure to netCDF, resulting in %50 file size reduction",
+        "Migrated proprietary data structure to netCDF, resulting in 50% file size reduction",
         "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
         "Proactively pen-tested and resolved security vulnerabilities",
         "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
