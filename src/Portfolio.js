@@ -3,7 +3,7 @@ import profilePicture from './img/misha.jpeg'
 import SAPLogo from './img/SAP.png'
 import RBCLogo from './img/RBC.png'
 import DoculaLogo from './img/Docula.jpeg'
-import DeepmindLogo from './img/GoogleDeepmind.png'
+import DeepmindLogo from './img/GoogleDeepmind2.jpeg'
 import { GithubIcon, MediumIcon, LinkedInIcon, XIcon, YoutubeIcon, RBCIcon } from './assets/svg/icons';
 
 // Import the JSON data
