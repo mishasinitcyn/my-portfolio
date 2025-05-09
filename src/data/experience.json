@@ -4,7 +4,7 @@
       "role": "Student Developer (GSoC)",
       "period": "May 2025-Present",
       "responsibilities": [
-        "Developing a deep learning library in JAX for Xarray data structure under mentorship from Dr Stephan Hoyer",
+        "Developing a deep learning library in JAX for Xarray data structure",
         "Accepted into program with 2.8% acceptance rate"
       ],
       "logo": "Google Deepmind"
