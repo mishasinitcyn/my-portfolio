@@ -3,6 +3,7 @@ import profilePicture from './img/misha.jpeg'
 import SAPLogo from './img/SAP.png'
 import RBCLogo from './img/RBC.png'
 import DoculaLogo from './img/Docula.jpeg'
+import DeepmindLogo from './img/GoogleDeepmind.png'
 import { GithubIcon, MediumIcon, LinkedInIcon, XIcon, YoutubeIcon, RBCIcon } from './assets/svg/icons';
 
 // Import the JSON data
@@ -78,7 +79,8 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
   const logos = {
     RBC: RBCLogo,
     SAP: SAPLogo,
-    Docula: DoculaLogo
+    Docula: DoculaLogo,
+    'Google DeepMind': DeepmindLogo
   };
 
   const getLogoHeight = (companyName) => {
@@ -86,6 +88,8 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
       case 'RBC':
         return 'h-11';
       case 'Docula':
+        return 'h-11';
+      case 'Google DeepMind':
         return 'h-11';
       default:
         return 'h-5';

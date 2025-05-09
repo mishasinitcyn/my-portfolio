@@ -1,14 +1,22 @@
 {
   "experience": [
+    {"company": "Google DeepMind",
+      "role": "Student Developer (GSoC)",
+      "period": "May 2025-Present",
+      "responsibilities": [
+        "Developing a deep learning library in JAX for Xarray data structure under mentorship from Dr Stephan Hoyer",
+        "Accepted into program with 2.8% acceptance rate"
+      ],
+      "logo": "Google Deepmind"
+    },
     {
       "company": "RBC",
       "role": "Quantitative Developer Intern",
       "period": "January 2025 - Present",
       "responsibilities": [
-        "Building data access layer for quantitative platform on Azure Databricks",
-        "Migrated proprietary data structure to netCDF, resulting in 50% file size reduction",
+        "Converted proprietary data structure to netCDF, resulting in 50% file size reduction",
+        "Developed database utilities for portfolio managers, resolved urgent production errors in equities platform",
         "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
-        "Proactively pen-tested and resolved security vulnerabilities",
         "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
       ],
       "logo": "RBC"
@@ -18,10 +26,10 @@
       "role": "Co-founder",
       "period": "January 2025 - Present",
       "responsibilities": [
-        "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing functionality with state-of-the-art AI models",
-        "Secured a $120k contract with a medical billing company to provision a private deployment on an Ubuntu server",
-        "Designed an SQL database with object storage, indexing, edit history, and logging for usage-based billing",
-        "Self-hosted open source Slack and Jira alternatives for internal company management"
+        "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing with state-of-the-art models",
+        "Secured a $120k contract with a medical billing company, saving thousands of hours of manual work",
+        "Shipped microservices and features for medical code indexing, PDF edits, and document extraction",
+        "Provisioned custom cloud architecture with virtual private servers across the United States"
       ],
       "logo": "Docula"
     },
