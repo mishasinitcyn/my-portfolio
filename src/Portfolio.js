@@ -26,9 +26,9 @@ const importAll = (r) => {
 const images = importAll(require.context('./img', true, /\.(png|jpe?g|svg|avif|gif)$/));
 
 const ProfileHeader = ({ profilePicture }) => (
-  <div className="flex flex-col md:flex-row items-center justify-between mb-8">
+  <div className="flex flex-col md:flex-row items-center justify-between my-12">
     <div className="flex flex-col md:flex-row items-center">
-      <img src={profilePicture} alt="Profile" className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full mb-4 md:mb-0 md:mr-8 object-cover"/>
+      <img src={profilePicture} alt="Profile" className="w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full mb-4 md:mb-0 md:mr-8 object-cover"/>
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">Mikhail Sinitcyn</h1>
         <div className="text-xl text-gray-600 mb-4">
@@ -104,7 +104,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
   };
 
   return (
-    <div className="bg-white rounded-md p-6 mb-8 border border-gray-100 shadow-sm">
+    <div className="bg-white rounded-md p-6 mb-8 border border-gray-100 shadow-sm ">
       <div className="flex items-center mb-2">
         <img 
           src={logos[company]} 
@@ -142,7 +142,7 @@ const Experience = () => (
 
 const ProjectCard = ({ item, onClick }) => (
   <div 
-    className="bg-white rounded-md overflow-hidden cursor-pointer border border-gray-300 shadow-md hover:shadow-lg transition-shadow"
+    className="bg-white rounded-md overflow-hidden cursor-pointer border border-gray-300 shadow-sm hover:shadow-lg transition-shadow"
     onClick={onClick}
   >
     <div className="aspect-w-16 aspect-h-9">
@@ -170,10 +170,10 @@ const ImageCarousel = ({ images, projectUrl }) => {
     <div className="relative mb-4">
       {projectUrl ? (
         <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-          <img src={images[currentIndex]} alt="Project" className="w-full h-auto rounded-lg shadow-md cursor-pointer" />
+          <img src={images[currentIndex]} alt="Project" className="w-full h-auto rounded-lg shadow-sm  cursor-pointer" />
         </a>
       ) : (
-        <img src={images[currentIndex]} alt="Project" className="w-full h-auto rounded-lg shadow-md cursor-pointer" />
+        <img src={images[currentIndex]} alt="Project" className="w-full h-auto rounded-lg shadow-sm cursor-pointer" />
       )}
       {images.length > 1 && (
         <>
@@ -337,7 +337,7 @@ const Portfolio = () => {
           z-index: -10;
           height: 100%;
           width: 100%;
-          background: radial-gradient(125% 125% at 50% 10%, white 40%, blue 100%);
+          // background: radial-gradient(125% 125% at 50% 10%, white 40%, blue 100%);
         }
       `}</style>
       
