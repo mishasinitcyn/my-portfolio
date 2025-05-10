@@ -31,7 +31,14 @@ const ProfileHeader = ({ profilePicture }) => (
       <img src={profilePicture} alt="Profile" className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full mb-4 md:mb-0 md:mr-8 object-cover"/>
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">Mikhail Sinitcyn</h1>
-        <p className="text-xl text-gray-600 mb-4">Quantitative Developer Intern @ RBC</p>
+        <div className="text-xl text-gray-600 mb-4">
+          <p className="mb-1">
+            Quantitative Developer Intern <span className="bg-gradient-to-b from-blue-700 to-blue-400 text-transparent bg-clip-text">@RBC</span>,
+            <span className="hidden sm:inline"> </span>
+            <br className="sm:hidden" />
+             Student Developer <span className="bg-gradient-to-b from-blue-700 to-blue-400 text-transparent bg-clip-text">@Google DeepMind</span>
+          </p>
+        </div>
         <div className="flex justify-center md:justify-start space-x-4">
           <a href="https://github.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-black">
             <GithubIcon />
@@ -42,7 +49,7 @@ const ProfileHeader = ({ profilePicture }) => (
           <a href="https://www.linkedin.com/in/mikhail-sinitcyn-8909b5224/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
             <LinkedInIcon />
           </a>
-          <a href="https://twitter.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#1DA1F2]">
+          <a href="https://twitter.com/mishasinitcyn" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#1DA1F2]">
             <XIcon />
           </a>
         </div>
@@ -58,14 +65,14 @@ const AboutMe = () => (
     <div className="bg-white rounded-lg p-6 mb-8 border border-gray-100 shadow-sm">
        <div className="flex flex-wrap gap-2 mb-4">
         <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-small text-blue-700 bg-gradient-to-b from-blue-100 to-blue-50">Software Development</span>
-        <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-small text-green-700 bg-gradient-to-b from-green-100 to-green-50">Cloud Infrastructure</span>
+        <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-small text-green-700 bg-gradient-to-b from-green-100 to-green-50">Infrastructure</span>
         <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-small text-purple-700 bg-gradient-to-b from-purple-100 to-purple-50">Data Engineering</span>
         <span className="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-small text-pink-700 bg-gradient-to-b from-pink-100 to-pink-50">Machine Learning</span>
       </div>
       <p className="text-gray-700">
-      Hi! I'm Misha. <br />
-      I'm currently interning as a quantitative developer at RBC where I'm working on scientific computing and spearheading the migration of our $25 billion quantitative investment platform to Databricks. 
-      Also working on my startup Docula, where I am responsible for our infrastructure, databases, and web security.
+      Hi, I'm Misha! Interning as a quant at RBC and contributing to JAX at Google DeepMind.
+      {/* I'm currently interning as a quantitative developer at RBC where I'm working on scientific computing and spearheading the migration of our $25 billion quantitative investment platform to Databricks. 
+      Also working on my startup Docula, where I am responsible for our infrastructure, databases, and web security. */}
       {/* In my freetime I deploy applications on my self-hosted Lenovo server and publish tutorials/articles on Medium. */}
       {/* I am actively developing fascinating projects in my free time, sharing my learning journey in Medium articles and direct tutoring on Discord. */}
     
@@ -80,7 +87,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
     RBC: RBCLogo,
     SAP: SAPLogo,
     Docula: DoculaLogo,
-    'Google DeepMind': DeepmindLogo
+    'Google DeepMind (GSoC)': DeepmindLogo
   };
 
   const getLogoHeight = (companyName) => {
@@ -89,7 +96,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
         return 'h-11';
       case 'Docula':
         return 'h-11';
-      case 'Google DeepMind':
+      case 'Google DeepMind (GSoC)':
         return 'h-11';
       default:
         return 'h-5';
@@ -97,7 +104,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-6 mb-8 border border-gray-100 shadow-sm">
+    <div className="bg-white rounded-md p-6 mb-8 border border-gray-100 shadow-sm">
       <div className="flex items-center mb-2">
         <img 
           src={logos[company]} 
@@ -105,7 +112,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
           className={`${getLogoHeight(company)} mr-4 object-cover`} 
         />
         <div>
-          <h3 className="font-semibold">{role} @ {company}</h3>
+          <h3 className="font-semibold">{role} <span className='text-slate-900'>@{company}</span></h3>
           <p className="text-gray-600">{period}</p>
         </div>
       </div>
@@ -120,7 +127,7 @@ const ExperienceItem = ({ company, role, period, responsibilities }) => {
 
 const Experience = () => (
   <div>
-    <h1 className="text-2xl font-bold mb-4">Professional Experience</h1>
+    <h1 className="text-2xl font-bold mb-4">Experience</h1>
     {experienceData.experience.map((item, index) => (
       <ExperienceItem 
         key={index}
@@ -135,7 +142,7 @@ const Experience = () => (
 
 const ProjectCard = ({ item, onClick }) => (
   <div 
-    className="bg-white rounded-lg overflow-hidden cursor-pointer border border-gray-300 shadow-md hover:shadow-lg transition-shadow"
+    className="bg-white rounded-md overflow-hidden cursor-pointer border border-gray-300 shadow-md hover:shadow-lg transition-shadow"
     onClick={onClick}
   >
     <div className="aspect-w-16 aspect-h-9">

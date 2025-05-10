@@ -1,7 +1,7 @@
 {
   "experience": [
-    {"company": "Google DeepMind",
-      "role": "Student Developer (GSoC)",
+    {"company": "Google DeepMind (GSoC)",
+      "role": "Student Developer",
       "period": "May 2025-Present",
       "responsibilities": [
         "Developing a deep learning library in JAX for Xarray data structure",
@@ -29,7 +29,7 @@
         "Co-founded a profitable AI startup, providing HIPAA-compliant document parsing with state-of-the-art models",
         "Secured a $120k contract with a medical billing company, saving thousands of hours of manual work",
         "Shipped microservices and features for medical code indexing, PDF edits, and document extraction",
-        "Provisioned custom cloud architecture with virtual private servers across the United States"
+        "Provisioned deployments with virtual private servers across the United States"
       ],
       "logo": "Docula"
     },
