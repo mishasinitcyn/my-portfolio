@@ -4,8 +4,8 @@
       "role": "Student Developer",
       "period": "May 2025-Present",
       "responsibilities": [
-        "Developing a deep learning library in JAX for Xarray data structure",
-        "Accepted into program with 2.8% acceptance rate"
+        "Developing a deep learning library in JAX for Xarray data structure under mentorship from the scientific computing team",
+        "Part of first cohort to be accepted into the program with 2.8% acceptance rate"
       ],
       "logo": "Google Deepmind"
     },
@@ -14,9 +14,10 @@
       "role": "Quantitative Developer Intern",
       "period": "January 2025 - Present",
       "responsibilities": [
+        "Reduced data preprocessing runtime for major securities fund by 70% through Python rewrite",
         "Converted proprietary data structure to netCDF, resulting in 50% file size reduction",
         "Developed database utilities for portfolio managers, resolved urgent production errors in equities platform",
-        "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes",
+        "Wrote financial market data pipelines with Airflow and FastAPI, running on OpenShift Kubernetes", 
         "Improved reliability of daily data scripts, monitoring and debugging 100GB+ workloads"
       ],
       "logo": "RBC"
