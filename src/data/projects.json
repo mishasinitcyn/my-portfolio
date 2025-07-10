@@ -14,6 +14,35 @@
       "imageFolder": "fortisbc"
     },
     {
+      "title": "Personal Deployment Server",
+      "date": "July 2024",
+      "shortDescription": "Personal server with app deployment via Coolify",
+      "bulletPoints": [
+        "Configured a Lenovo TS150 server for self-hosting applications using the Coolify platform running on Ubuntu.",
+        "Set up a CI/CD pipeline for automatic deployment with Github webhooks, managing multiple deployments to custom domains."
+      ],
+      "images": [
+        "https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png"
+      ],
+      "imageFolder": "personal_cloud"
+    },
+    {
+      "title": "Netflix Recommendation Engine",
+      "date": "December 2024",
+      "shortDescription": "Movie recommendation model using XGBoost",
+      "bulletPoints": [
+        "Implemented a movie recommendation engine using XGBoost, performed hyperparameter tuning with random search",
+        "Engineered user preference features by merging Netflix ratings data with the IMDb movies dataset",
+        "Modeled trends in user activity via clustering and outlier detection"
+      ],
+      "projectUrl": "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine/blob/main/report.pdf",
+      "github": "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine",
+      "images": [
+        "https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940"
+      ],
+      "imageFolder": "netflix"
+    },
+    {
       "title": "RepoCleanup.com",
       "date": "June 2024 - August 2024",
       "shortDescription": "GitHub administration application",
@@ -42,35 +71,6 @@
       "medium": "https://medium.com/@msa242/mlchat-a-retrieval-augmented-generation-rag-learning-platform-4f5a5601fcff",
       "youtube": "https://youtu.be/sGYPFMAnqSw",
       "imageFolder": "mlchat"
-    },
-    {
-      "title": "Personal Deployment Server",
-      "date": "July 2024",
-      "shortDescription": "Personal server with app deployment via Coolify",
-      "bulletPoints": [
-        "Configured a Lenovo TS150 server for self-hosting applications using the Coolify platform running on Ubuntu.",
-        "Set up a CI/CD pipeline for automatic deployment with Github webhooks, managing multiple deployments to custom domains."
-      ],
-      "images": [
-        "https://lenovopress.lenovo.com/share/ae03a648e7f95c709ed0b34da0ccc7ea/meta_og.png"
-      ],
-      "imageFolder": "personal_cloud"
-    },
-    {
-      "title": "Netflix Recommendation Engine",
-      "date": "December 2024",
-      "shortDescription": "Movie recommendation model using XGBoost",
-      "bulletPoints": [
-        "Implemented a movie recommendation engine using XGBoost, performed hyperparameter tuning with random search",
-        "Engineered user preference features by merging Netflix ratings data with the IMDb movies dataset",
-        "Modeled trends in user activity via clustering and outlier detection"
-      ],
-      "projectUrl": "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine/blob/main/report.pdf",
-      "github": "https://github.com/mishasinitcyn/Netflix-Recommendation-Engine",
-      "images": [
-        "https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940"
-      ],
-      "imageFolder": "netflix"
     },
     {
       "title": "Blood Bank Database",
