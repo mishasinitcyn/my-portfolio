@@ -4,21 +4,16 @@
       "role": "Student Developer",
       "period": "May 2025-Present",
       "responsibilities": [
-        "Contributing to the Xarray-JAX deep learning library under mentorship from the scientific computing team",
-        "Part of the first Google Summer of Code cohort with 2.8% acceptance rate",
-        "Presented my work to Cohere Labs"
+        "Implemented deep learning framework support, coordinate parsing, vectorization and sharding for the Xarray-JAX Python library"
       ],
       "logo": "Google Deepmind"
     },
     {
       "company": "RBC",
       "role": "Quantitative Developer Intern",
-      "period": "January 2025 - Present",
+      "period": "January 2025 - August 2025",
       "responsibilities": [
-        "Implemented a major refactor to the quantitative scripts, reducing numerical instability, enforcing strong type assertions, and replacing the data access layer",
-        "Reduced data preprocessing runtime for major securities fund by 70% through Python rewrite",
-        "Converted proprietary data structure to netCDF, resulting in 50% file size reduction",
-        "Wrote financial market data scripts with Airflow and FastAPI"
+        "Tensor computing and financial data engineering"
       ],
       "logo": "RBC"
     },
@@ -27,10 +22,7 @@
       "role": "Data Science Intern",
       "period": "May 2024 - September 2024",
       "responsibilities": [
-        "Engineered a multi-agent system for automated contract analysis, selected as the department's research project of the year",
-        "Trained and evaluated natural language classifiers using MLflow, deployed with Docker, FastAPI and Gradio",
-        "Wrote ETL scripts to transform, cluster, and visualize documents for machine learning operations",
-        "Created semi-supervised LLM evaluations, ensuring expert-level report generation"
+        "Natural language processing for software license automation"
       ],
       "logo": "SAP"
     },
@@ -39,9 +31,7 @@
       "role": "Software Engineer Intern",
       "period": "January 2023 - September 2023",
       "responsibilities": [
-        "Developed a contract review platform with Angular, Flask, MongoDB, and GPT-4, speeding up the review process by 50%",
-        "Deployed application to Apache HTTP server, configured custom Nginx routes and Bash scripts",
-        "Wrote API tests using Postman, frontend unit tests with Jest, and UI tests with Selenium"
+        "Web development and testing"
       ],
       "logo": "SAP"
     }
