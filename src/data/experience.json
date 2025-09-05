@@ -2,7 +2,7 @@
   "experience": [
     {"company": "Google DeepMind",
       "role": "Student Developer",
-      "period": "May 2025-Present",
+      "period": "May 2025 - Present",
       "responsibilities": [
         "Implemented deep learning framework support, coordinate parsing, vectorization and sharding for the Xarray-JAX Python library"
       ],
