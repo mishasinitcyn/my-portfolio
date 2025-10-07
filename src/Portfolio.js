@@ -36,7 +36,8 @@ const ProfileHeader = ({ profilePicture }) => (
             {/* Quantitative Developer Intern <span className="bg-gradient-to-b from-blue-700 to-blue-400 text-transparent bg-clip-text">@RBC</span>, */}
             <span className="hidden sm:inline"> </span>
             {/* <br className="sm:hidden" /> */}
-             GSoC Developer <span className="bg-gradient-to-b from-blue-700 to-blue-400 text-transparent bg-clip-text">@DeepMind</span>
+             {/* GSoC Developer <span className="bg-gradient-to-b from-blue-700 to-blue-400 text-transparent bg-clip-text">@DeepMind</span> */}
+             working on my startup
           </p>
         </div>
         <div className="flex justify-center md:justify-start space-x-4">

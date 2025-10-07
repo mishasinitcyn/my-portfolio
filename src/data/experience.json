@@ -2,7 +2,7 @@
   "experience": [
     {"company": "Google DeepMind",
       "role": "GSoC Developer",
-      "period": "May 2025 - Present",
+      "period": "May 2025 - September 2025",
       "responsibilities": [
         "Implemented deep learning framework support, coordinate parsing, vectorization and sharding for the Xarray-JAX Python library"
       ],
